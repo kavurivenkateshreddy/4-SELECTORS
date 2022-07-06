@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+    <style>
+        h2 {color:rgb(237, 92, 52);}
+        h3 {color:rgb(7, 248, 39);text-decoration:underline;}
+        #output {text-align:center;font-size:25px;color:blue;text-decoration:underline;}
+        #color {COLOR:blue;}
+
+        a:link {color: red;}
+        a:visited {color: green;}
+        a:hover {color: hotpink;}
+        a:active {color: blue;}
+         
+        a.highlight:hover {color: #ff0000;font-size: 22px;}
+
+        #one {background-color: green;color: white;padding: 25px;text-align: center;}
+        #one:hover {background-color: blue;}
+
+        pre {display: none;background-color: yellow;padding: 20px;}
+        div:hover pre {display: block;}
+
+        #first li:first-child {color: red;} 
+        #last li:last-child {color: blue;} 
+        #nth-child li:nth-child(3) {border: 2px solid cyan;}
+        #multiple li:nth-child(2n) {color: orange;} 
+        
+        p:first-child i {color: blue;}
+
+    </style>
+</head>
+<body>
+    <h1><u><center><font color="red">3.PSEUDO CLASS SELECTOR</font></center></u></h1>
+    <P>---> A pseudo-class is used to define a special state of an element.</P>
+    <P>---> For example, it can be used to:</P>
+    <P>---> * Style an element when a user mouses over it</P>
+    <P>---> * Style visited and unvisited links differently</P>
+    <P>---> * Style an element when it gets focus</P>
+    <P>---> SYNTAX : selector:pseudo-class {property: value;}</P><br>
+    <P>---> Some of the pseudo class selectors are : </P>
+    <p><h2><ol type="1">
+        <li>ANCHOR PSEUDO CLASS</li>
+        <li>PSEUDO CLASS AND HTML CLASS</li>
+        <li>HOVER ON DIV TAG</li>
+        <li>TOOL TIP HOVER IN PSEUDO CLASS </li>
+        <li>MATCHES WITH FIRST,LAST,AND nTH-CHILS OF PSEUDO CLASS</li>
+        <li>MATCHES THE &LT i &GT</li>
+    </ol></h2></p>
+
+
+
+    <p><ol type="1">
+        <h2><u><li>ANCHOR PSEUDO CLASS (link)</li></u></h2>
+        <p><ol type="1">
+            <li id="color">UNVISITED LINK</li>
+        <p>---> In the pseudo class Anchor tag . For an unvisited link we can adjest the color of the link. That color which is for before opening the link.<br>
+            ---> Example : a:link{color:red;}</p>
+            <li id="color">VISITED LINK</li>
+            <p>---> We can adjest the color of the link "after visited" the link.</p>
+            <p>--->  Example : a:visited{color:green;}</p>
+            <li id="color">MOUSE OVER THE LINK</li>
+            <P>---> When we move the mouse to that link it attomatically changes its color by using "hover".</P>
+            <p>---> Example : a:hover{color:hotpink;}</p>
+            <li id="color">SELECTED LINK</li>
+            <P>---> When we long press the link or click on the link. it will active we can adject a color to taht active link.</P>
+            <p>---> Example : a:active{color:hotpink;}</p><br>
+            <P>NOTE : a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective!</P>
+            <P>a:active MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive.</P>
+            <h3>EXAMPLE FOR ANCHOR PSEUDO CLASS : </h3>
+            &lt html &gt<br>
+            &lt head &gt<br>
+            &lt style &gt<br><br>
+            /* unvisited link */<br>
+            a:link {color: red;}<br>
+            /* visited link */<br>
+            a:visited {color: green;}<br>
+            /* mouse over link */<br>
+            a:hover {color: hotpink;}<br>
+            /* selected link */<br>
+            a:active {color: blue;}<br><br>
+            &lt /style &gt<br>
+            &lt /head &gt<br>
+            &lt body &gt <br>
+            &lt a href="https://github.com/kavurivenkateshreddy" title="Github link Same page">&lt center>&lt font size="20px">:Github link &lt /font>&lt /center>&lt /a &gt<br>
+            &lt /body &gt <br>
+            &lt /html &gt<br>
+            <p id="output">OUTPUT</p>
+            <a href="https://github.com/kavurivenkateshreddy" title="Github link Same page"><center><font size="20px">:Github link</font></center></a>
+        </ol>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <h2><u><li>PSEUDO CLASS AND HTML CLASS</li></u></h2>
+        <p>---> Pseudo-classes can be combined with HTML classes:</p>
+        <p>---> Suppose if we want to hilight the link with the hover !</p>
+        <h3>EXAMPLE : </h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br><br>
+        a.highlight:hover {color: #ff0000;font-size: 22px;}<br><br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+        &lt p &gt &lta class="highlight" href="css_syntax.asp &gt CSS Syntax &lt /a &gt &lt /p &gt<br><br>
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+        <p><a class="highlight" href="https://github.com/kavurivenkateshreddy"><center>:Github link</center></a></p>
+        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        <h2><u><li>HOVER ON DIV TAG</li></u></h2>
+        <p>---> We can use the ":hover" pseudo class on &lt div &gt tag.</p>
+        <h3>EXAMPLE : </h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br><br>
+        div {background-color: green;color: white;padding: 25px;text-align: center;}<br>
+        div:hover {background-color: blue;}<br><br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+        &lt p &gtMouse over the div element below to change its background color:&lt /p &gt<br>
+        &lt div &gtMouse Over Me &lt /div &gt &lt br &gt<br><br>
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+        <p>Mouse over the div element below to change its background color:</p>
+        <div id="one">Mouse Over Me</div>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        <h2><u><li>TOOL TIP HOVER IN PSEUDO CLASS</li></u></h2>
+        <p>---> The "tool tip" text class holds the actual tool tip text. </p>
+        <p>---> It is hidden by default ad it will be visible on hover.</p>
+        <p>---> The :hover selecor is used to show the tooltip text when the user moves the muse over the &lt div &gt with hover of the &lt p &gt tag.</p>
+        <h3>EXAMPLE : </h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br><br>
+        pre {display: none;background-color: yellow;padding: 20px;}<br>
+        div:hover pre {display: block;}<br><br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+        &lt div &gt Hover over this div element to show the p element<br>
+        &lt pre &gt Tada! Here I am &lt /pre &gt<br>
+            &lt /div &gt<br><br>
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+
+        <div> Hover over this div element to show the p element
+            <pre>Tada! Here I am!</pre>
+        </div>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        <h2><u><li>MATCHES WITH FIRST,LAST,AND nTH-CHILS OF PSEUDO CLASS</li></u></h2>
+        <p>---> The "first-child" pseudo class matches a specified element that is the first child of another element.</p>
+        <p>---> It will match with the only first child element of every parent element.</p><br>
+        <p>---> In the "last-child" selector matches with the only the last element of tghe parent element</p><br>
+        <p>---> In the "nTH-child(n)" selector will matches that the nTH child of its parent.</p><br>
+        <p>---> In nTH child we can also repeat that selection by multiple times ex: 2,4,6,8,10...etc.</p>
+        <h3>EXAMPLE : </h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br><br>
+        #first li:first-child {color: red;} <br>
+        #last li:last-child {color: blue;} <br>
+        #nth-child li:nth-child(3) {border: 2px solid cyan;}<br>
+        #multiple li:nth-child(2n) {color: orange;}<br><br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+        &lt ul id="first" &gt<br>
+        &lt li &gt Paragraph 1 &lt /li &gt<br>
+        &lt li &gt Paragraph 2 &lt /li &gt<br>
+        &lt li &gt Paragraph 3 &lt /li &gt<br>
+        &lt /ul &gt <br><br>
+
+        &lt ul  id="last"><br>
+        &lt li &gt Paragraph 4 &lt /li &gt<br>
+        &lt li &gt Paragraph 5 &lt /li &gt<br>
+        &lt li &gt Paragraph 6 &lt /li &gt<br>
+        &lt /ul &gt <br><br>
+
+        &lt ul id="nth-child" &gt<br>
+        &lt li &gt Paragraph 7 &lt /li &gt<br>
+        &lt li &gt Paragraph 8 &lt /li &gt<br>
+        &lt li &gt Paragraph 9 &lt /li &gt<br>
+        &lt li &gt Paragraph 10 &lt /li &gt<br>
+        &lt /ul &gt <br><br>
+        
+        &lt ul id="multiple" &gt<br>
+        &lt li &gt Paragraph 11 &lt /li &gt<br>
+        &lt li &gt Paragraph 12 &lt /li &gt<br>
+        &lt li &gt Paragraph 13 &lt /li &gt<br>
+        &lt li &gt Paragraph 14 &lt /li &gt<br>
+        &lt li &gt Paragraph 15 &lt /li &gt<br>
+        &lt /ul &gt <br><br>
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+
+        ---> Here we are changing the color of a first child into red
+        <ul id="first">
+            <li>Paragraph 1</li>
+            <li>Paragraph 2</li>	
+            <li>Paragraph 3</li>
+        </ul><br>
+
+            ---> Here we are changing the color of a last child into blue
+        <ul  id="last">
+            <li>Paragraph 4</li>
+            <li>Paragraph 5</li>
+            <li>Paragraph 6</li>
+        </ul><br>
+
+            ---> here we are changing any paragrph we want
+        <ul id="nth-child">
+            <li>Paragraph 7</li>
+            <li>Paragraph 8</li>
+            <li>Paragraph 9</li>
+            <li>Paragraph 10</li>
+        </ul><br>
+        
+            ---> Here we are changing the style of multiples of 2
+        <ul id="multiple">
+            <li>Paragraph 11</li>
+            <li>Paragraph 12</li>
+            <li>Paragraph 13</li>
+            <li>Paragraph 14</li>
+            <li>Paragraph 15</li>
+        </ul><br>
+        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <h2><u><li>MATCHES THE &LT i &GT</li></u></h2>
+        <p>---> In the &lt i &gt element in the "first child" of the parent element.</p>
+        <h3>EXAMPLE : </h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br><br>
+        p:first-child i {color: blue;}<br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+        &lt div &gt<br>
+        &lt p &gt I am a &lt i &gt strong &lt /i &gt person. I am a &lt i>strong &lt /i &gt person. &lt /p &gt<br>
+        &lt p &gt I am a &lt i &gt strong &lt /i &gt person. I am a &lt i>strong &lt /i &gt person. &lt /p &gt<br>
+        &lt /div  &gt<br><br>
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+        <div>
+          <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+          <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+       </div>
+
+
+    </ol>
+        <p></p>
+</body>
+</html>
