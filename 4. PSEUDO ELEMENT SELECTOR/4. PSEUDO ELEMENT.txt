@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+    <style>
+        h2 {color:rgb(237, 92, 52);}
+        h3 {color:rgb(7, 248, 39);text-decoration:underline;}
+        #output {text-align:center;font-size:25px;color:blue;text-decoration:underline;}
+
+        #first-letter::first-letter {color: #5900ff;font-size: xx-large;}
+        #first-line::first-line {color: #ff0000;font-variant: small-caps;}
+
+        #before::before {content: url(https://c.tenor.com/Wq-MvpjAJksAAAAC/emojilaugh-emoji.gif;);}
+        #after::after {content:url(https://c.tenor.com/Wq-MvpjAJksAAAAC/emojilaugh-emoji.gif;)}
+
+        #selection::selection {color: red;background: yellow;}
+        
+    </style>
+</head>
+<body>
+    <h1><u><center><font color="red">4. PSEUDO ELEMENT SELECTOR (::)</font></center></u></h1>
+    <P>---> A CSS pseudo-element is used to style specified parts of an element.</P>
+    <P>---> For Example wecan style the first line or first letter f an element.</P>
+    <p>---> we cn also insrt the content before after the document.</p>
+    <p><ol type="1">
+        <h2><li>The ::first-line (and) ::first-letter of Pseudo-element</li></h2>
+        <p>---> It is used to special style of the line (and) letter of the text.</p>
+        <h3>EXAMPLE :</h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br><br>
+        #first-line::first-line {color: #ff0000;font-variant: small-caps;}<br>
+        #irst-letter::first-letter {color: #5900ff;font-size: xx-large;}<br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+
+        &lt p &gtYou can use the ::first-letter pseudo-element to add a special effect to the first character of a text! &lt /p &gt<br>
+        &lt p &gtYou can use the ::first-line pseudo-element to add a special effect to the first character of a text! &lt /p &gt<br><br>
+        
+        &lt /body &gt<br>
+        &lt /head &gt<br>
+        &lt /html &gt<br>
+    
+
+        <p id="output">OUTPUT</p>
+        <p id="first-letter">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+        <p id="first-line">You can use the ::first-line pseudo-element to add a special effect to the first character of a text!</p>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <h2><li>The ::before (and) ::after of Pseudo-element</li></h2>
+        <P>---> The ::before (and) ::after pseudo-element can be used to insert some content before the content of an element.</P>
+        <h3>EXAMPLE :</h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br><br>
+        #before::before {content: url(https://c.tenor.com/Wq-MvpjAJksAAAAC/emojilaugh-emoji.gif;);}
+        #after::after {content:url(https://c.tenor.com/Wq-MvpjAJksAAAAC/emojilaugh-emoji.gif;)}
+        &lt /style &gt<br>
+        &lt body &gt<br>
+        &lt p &gt The ::before pseudo-element inserts content after the content of an element. &lt /p &gt<br>
+        &lt p &gt The ::after pseudo-element inserts content after the content of an element. &lt /p &gt<br><br>
+        &lt /body &gt<br>
+        &lt /head &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+        <p id="before">The ::before pseudo-element inserts content after the content of an element.</p>
+        <p id="after">The ::after pseudo-element inserts content after the content of an element.</p>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <h2><li>The ::selection Pseudo-element</li></h2>
+        <p>---> The ::selection pseudo-element matches the portion of an element that is selected by a user.</p>
+        <h3>EXAMPLE :</h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br><br>
+        #selection::selection {color: red;background: yellow;}<br><br>
+        &lt /style &gt<br>
+        &lt body &gt<br><br>
+        &lt Select some text on this page: &gt<br>
+        &lt  The ::selection pseudo-element matches the portion of an element that is selected by a user. &gt<br><br>
+        &lt /body &gt<br>
+        &lt /head &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+        <p id="selection">Select some text on this page:</p>
+        <p id="selection">The ::selection pseudo-element matches the portion of an element that is selected by a user.</p>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    </ol></p> 
+</body>
+</html>
