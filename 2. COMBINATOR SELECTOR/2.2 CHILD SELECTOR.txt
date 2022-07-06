@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+    <style>
+        h2 {color:rgb(237, 92, 52);}
+        h3 {color:rgb(7, 248, 39);text-decoration:underline;}
+        #output {text-align:center;font-size:25px;color:blue;text-decoration:underline;}
+        div>p {background-color: yellow;}
+
+    </style>
+</head>
+<body>
+    <h1><u><center><font color="red">2. COMBINATOR SELECTOR</font></center></u></h1>
+    <h1><u><center><font color="red">2. CHILD SELECTOR (>) </font></center></u></h1>
+    <p>---> The child selector selects all elements that are the children of a specified element.</p>
+        <p>---> Here we use the &lt div &gt tag as the "parent" and the p,h1,h2, ect. are the "child" tag or element to the div tag.</p>
+        <p>---> It will consider only te child tag and it "could not" consider the child of child</p>
+        <p>---> It will consider only child elements.</p>
+        <p>---> SYNTAX : div > p {background-color: yellow;}---> HERE THE > IN BETWEEN THE div and p tags.</p>
+        <h3>EXAMPLE :</h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br>
+        div > {background-color: yellow;}<br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+
+        &lt h4 &gtChild Selector&lt /h4 &gt<br><br>
+
+        &lt p>The child selector (>) selects all elements that are the children of a specified element.&lt /p &gt<br><br>
+        
+        &lt div &gt<br>
+        &lt p &gt Paragraph 1 in the div.&lt /p &gt<br>
+        &lt p &gt Paragraph 2 in the div.&lt /p &gt<br><br>
+        &lt section &gt<br>
+            <!-- not Child but Descendant -->
+            &lt p &gtParagraph 3 in the div (inside a section element).&lt /p><br>
+            &lt /section><br><br>
+        &lt p  &gtParagraph 4 in the div.&lt /p &gt<br>
+        &lt /div><br>
+        
+        &lt p &gt Paragraph 5. Not in a div.&lt /p &gt<br>
+        &lt p &gt Paragraph 6. Not in a div.&lt /p &gt<br>
+
+        &lt /body &gt<br>
+        &lt /head &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+
+<h4>Child Selector</h4>
+
+<p>The child selector (>) selects all elements that are the children of a specified element of div tag.</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>Paragraph 3 in the div (inside a section element).</p>
+  </section>
+  <p>Paragraph 4 in the div.</p>
+</div>
+
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p><hr>
+
+</body>
+</html>

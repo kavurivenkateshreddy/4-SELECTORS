@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+    <style>
+        h2 {color:rgb(237, 92, 52);}
+        h3 {color:rgb(7, 248, 39);text-decoration:underline;}
+        #output {text-align:center;font-size:25px;color:blue;text-decoration:underline;}
+        div+p {background-color: yellow;}
+
+    </style>
+</head>
+<body>
+    <h1><u><center><font color="red">2. COMBINATOR SELECTOR</font></center></u></h1>
+    <h1><u><center><font color="red">3. ADJACENT SIBLING SELECTOR (+) </font></center></u></h1>
+    <p>---> The adjacent sibling selector is used to select an element that is directly after another specific element.</p>
+    <P>---> Sibling elements must have the same parent element, and "adjacent" means "immediately following".</P>
+    <P>---> It will consider only the "one" element which is immediately after the &lt /div &gt</P>
+    <p>---> SYNTAX : div + p {background-color: yellow;}---> HERE THE + IN BETWEEN THE div and p tags.</p>
+    <h3>EXAMPLE :</h3>
+    &lt html &gt<br>
+    &lt head &gt<br>
+    &lt style &gt<br>
+    div + {background-color: yellow;}<br>
+    &lt /style &gt<br>
+    &lt /head &gt<br>
+    &lt body &gt<br><br>
+
+    &lt div &gt<br>
+        &lt p &gtParagraph 1 in the div.&lt /p &gt<br>
+        &lt p &gtParagraph 2 in the div.&lt /p &gt<br>
+    &lt /div><br>
+      
+        &lt p &gt Paragraph 3. After a div.&lt /p &gt<br>
+        &lt p &gtParagraph 4. After a div.&lt /p &gt<br>
+
+        &lt /body &gt<br>
+        &lt /head &gt<br>
+        &lt /html &gt<br>
+
+        <p id="output">OUTPUT</p>
+
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+          </div>
+          
+          <p>Paragraph 3. After a div.</p>
+          <p>Paragraph 4. After a div.</p>
+
+
+</body>
+</html>

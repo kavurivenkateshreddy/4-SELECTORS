@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+    <style>
+        h2 {color:rgb(237, 92, 52);}
+        h3 {color:rgb(7, 248, 39);text-decoration:underline;}
+        #output {text-align:center;font-size:25px;color:blue;text-decoration:underline;}
+        div~p {background-color: yellow;}
+
+    </style>
+</head>
+<body>
+    <h1><u><center><font color="red">2. COMBINATOR SELECTOR</font></center></u></h1>
+    <h1><u><center><font color="red">4. GENERAL SELECTOR (~) </font></center></u></h1>
+    <P>---> The general sibling selector (~) selects all elements that are next siblings of a specified element.</P>
+    <P>---> It will "consider" all the mail "child tag" which is after the &lt /div &gt tag.</P>
+    <P>---> It will "not consider" the "child of child tag."</P>
+    <p>---> SYNTAX : div ~ p {background-color: yellow;}---> HERE THE ~ IN BETWEEN THE div and p tags.</p>
+    <h3>EXAMPLE :</h3>
+    &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br>
+        div~p {background-color: yellow;}<br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+
+        &lt p>Paragraph 1.&lt /p &gt<br><br>
+
+        &lt div &gt<br>
+        &lt p &gtParagraph 2.&lt /p &gt<br>
+        &lt /div &gt<br><br>
+
+        &lt p &gtParagraph 3.&lt /p &gt<br>
+        &lt code &gtSome code.&lt /code &gt<br>
+        &lt p &gtParagraph 4.&lt /p &gt<br>
+
+        <p id="output">OUTPUT</p>
+        <p>Paragraph 1.</p>
+
+    <div>
+        <p>Paragraph 2.</p>
+    </div>
+
+        <p>Paragraph 3.</p>
+        <code>Some code.</code>
+        <p>Paragraph 4.</p>
+
+    </body>
+    </html>
