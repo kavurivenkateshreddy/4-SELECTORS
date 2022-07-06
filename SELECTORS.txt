@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+    <link rel="Stylesheet" href="EXTERNAL.css">
+    <style>
+        #size {font-size:20px;}
+        h2 {color:rgb(255, 0, 225);text-decoration:underline;}
+        h3 {color:rgb(140, 140, 172);text-decoration:underline;}
+        #p {text-align: center;color: rgb(255, 0, 183);} 
+        #output {text-align: center;color: rgb(76, 0, 255);font-size:20px;text-decoration:underline;}
+    </style>
+</head>
+<body>
+    <h1><font color="RED"><center><U>SELECTORS</U></center></font></h1>
+    <P id="size">---> A CSS selector selects the HTML element(s) you want to style.</P>
+    <P id="size">---> CSS selectors are used to "find" (or select) the HTML elements you want to style.</P><br>
+    <p id="size">---> We can divide CSS selectors into five categories:</p>
+
+    <p><h2><ol type="1" >
+        <li>SIMPLE SELECTOR</li><br>
+        <li>COMBINATION SELACTOR</li><br>
+        <li>PSEUDO CLAASS SELECTOR</li><br>
+        <li>PSEUDO ELEMENTS SELECTOR</li><br>
+        <li>ATTRIBUTE SELECTOR</li><br>
+    </ol></h2></p>
+    <h3>EXAMPLE :</h3>
+    --->Here, all &lt id(#) &gt elements on the page will be center-aligned, with a red text color: <br><br>
+
+    &lt head &gt<br>
+    &lt style &gt<br>
+        #p {<br>
+          text-align: center;<br>
+          color: rgb(255, 0, 183);<br>
+        } <br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+        
+        &lt p id="p" &gt Every paragraph will be affected by the style. &lt /p &gt<br>
+        &lt p id="p" &gt Me too! &lt /p &gt<br>
+        &lt p id="p" &gt And me! &lt /p &gt<br><br>
+        
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+
+        <p id="output">OUTPUT</p>
+
+
+
+<p id="p">Every paragraph will be affected by the style.</p>
+<p id="p">Me too!</p>
+<p id="p">And me!</p>
+</body>
+</html>
