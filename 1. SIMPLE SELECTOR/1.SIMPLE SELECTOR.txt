@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+    <style>
+        #size {font-size:20px;}
+        h2 {color:rgb(237, 92, 52);}
+        h3 {color:rgb(7, 248, 39);text-decoration:underline;}
+        #output {text-align:center;font-size:25px;color:blue;text-decoration:underline;}
+
+        h4 {background-color:yellow;color:red;font-size:20px;}
+        #one {text-align: center;color: red;font-size:20px;}
+        p.two   {text-align: center; color: red;}
+        #three,#four,#five {text-align: center;color: red;font-size:20px;}
+    </style>
+</head>
+<body>
+    <h1><u><center><font color="red">1. SIMPLE SELECTOR</font></center></u></h1>
+    <p id="size">---> Simple selectors (select elements based on name, id, class)</p>
+    <p id="size">---> There are FIVE types of Simple Selectors They are :</p>
+    <p><h2><ol type="1">
+        <li>TAG SELECTOR</li>
+        <li>ID SELECTOR</li>
+        <li>CLASS SELECTOR</li>
+        <li>UNIVRSAL SELECTOR</li>
+        <li>GROUPING SELECTOR</li>
+    </ol></h2></p>
+    <p><ol type="1">
+        <h2><u><li>TAG SELECTOR (p,h1,h2,etc)</li></u></h2>
+        <p>---> The tag selector is used to redefine existing HTML tags.</p> 
+        <p>---> Select this option if you want to change the formatting options for an HTML tag, such as the &lt h1 &gt tag or the &lt ol &gt tag. In many cases, redefining existing HTML tags with CSS has advantages over creating new styles</p>
+        <h3>EXAMPLE :</h3>
+        h4 {background-color:rgb(81, 158, 89);color:red;}---> it is given in between &lt style &gt &lt /style &gt<br><br>
+        &lt h4 &gt Here the background-color will change to green text in red color by using the " h4 in the style selector &lt /h4 &gt
+        <p id="output">OUTPUT</p>
+        <h4> Here the background-color will change to yellow text in red color by using the " h4 in the style selector </h4><hr>
+
+
+        
+        <h2><u><li>ID SELECTOR (#)</li></u></h2>
+        <p>---> The id selector uses the id attribute of an HTML element to select a specific element.</p>
+        <p>---> The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+        <p>---> To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+        <h3>EXAMPLE :</h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br>
+        #one   {text-align: center; color: red;}<br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+
+        &lt p id="one" &gtHello World! &lt /p &gt<br>
+        &lt p &gtThis paragraph is not affected by the style. &lt /p &gt<br><br>
+
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+
+        <p id="one">Hello World!</p>
+        <p>This paragraph is not affected by the style.</p><hr>
+
+
+
+        <h2><u><li>CLASS SELECTOR (.)</li></u></h2>
+        <p>---> The class selector selects HTML elements with a specific class attribute.</p>
+        <p>---> To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+        <h3>EXAMPLE :</h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br>
+        p.two   {text-align: center; color: red;}<br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+
+        &lt p class="two" &gtHello World! &lt /p &gt<br>
+        &lt h5 &gtThis paragraph is not affected by the style class is assined only to the &lt p &gt tag. &lt /h5 &gt<br><br>
+
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+
+        <p class="two">Hello World!</p>
+        <h5 class="two">This paragraph is not affected by the style because class is assined only to the &lt p &gt tag.</h5>
+        <p>---> If it need to apply for all the elements we can write like this <font size=5px>.class {text-align: center; color: red;}</font></p>
+        <p>---> Here the element is not mention so it will applicable to all the Elements.</p><hr>
+
+
+
+        <h2><u><li>UNIVERSAL SELECTOR (*)</li></u></h2>
+        <P>---> The universal selector (*) selects all HTML elements on the page.</P>
+        <h3>EXAMPLE :</h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br>
+        * {text-align: center; color: red;}<br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+
+        &lt p  &gt Hello World! &lt /p &gt<br>
+        &lt h1 &gt Every element on the page will be affected by the style. &lt /h1 &gt<br><br>
+
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+
+        <p>---> Here the out put is not menction Because UNIVERSAL SELECTOR will will affect every HTML element on the page <font size=5px>* {text-align: center; color: red;}</font></p>
+        <p>---> so here the above given &lt p &gt and &lt h1 &gt will exist in center and text in red color.</p><hr>
+
+
+
+        <h2><u><li>GROUPING SELECTOR</li></u></h2>
+        <p>---> The grouping selector selects all the HTML elements with the same style definitions.</p>
+        <p>---> It will be better to group the selectors, to minimize the code.</p>
+        <p>---> To group selectors, separate each selector with a comma (,).</p>
+        <h3>EXAMPLE :</h3>
+        &lt html &gt<br>
+        &lt head &gt<br>
+        &lt style &gt<br>
+        #three, #four, #five  {text-align: center;color: red;font-size:20px;}<br>
+        &lt /style &gt<br>
+        &lt /head &gt<br>
+        &lt body &gt<br><br>
+
+        &lt p id="three" &gt Hello World! &lt /p &gt<br>
+        &lt p id="four" &gt To group selectors, separate each selector with a comma (,). &lt /p &gt<br>
+        &lt p id="five" &gt Hello CSS! &lt /p &gt<br><br>
+
+        &lt /body &gt<br>
+        &lt /html &gt<br>
+        <p id="output">OUTPUT</p>
+        <p id="three">Hello World!</p>
+        <p id="four">To group selectors, separate each selector with a comma (,).</p>
+        <p id="five">Hello CSS!</p>
+
+    </ol></p>
+</body>
+</html>
